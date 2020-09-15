@@ -22,7 +22,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(MainActivity.this, "Installed Successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Animate!", Toast.LENGTH_SHORT).show();
+
+                txtHelloWorld.animate().alpha(0f).setDuration(2000);
+                txtHelloWorld.setText("Hi World!");
+                txtHelloWorld.animate().alpha(1f).setDuration(1000);
 
             }
         });
